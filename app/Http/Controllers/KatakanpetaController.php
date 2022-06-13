@@ -22,7 +22,7 @@ class KatakanpetaController extends Controller
 	]);
 	return redirect('/katakanpeta');
     }
-
+    
     public function hapus($id)
     {
 	DB::table('parkirdong')->where('id',$id)->delete();
