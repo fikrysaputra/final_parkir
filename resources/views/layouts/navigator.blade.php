@@ -62,7 +62,7 @@
                     </li>
                     <li class="navbar-brand">
                         <a class="h4 text-light" href="/katakanpeta">
-                        <i class="fa fa-globefas fa-info"></i>
+                        <i class="fa fa-globe"></i>
                         Map Tel-U
                         </a>
                     </li>

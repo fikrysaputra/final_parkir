@@ -60,7 +60,13 @@
         <h1 class="fw-light">Tel-U Parking</h1>
         <p class="lead text-muted"> Dalam Tel-U Parking, kamu bisa melihat Indikator Parkir, Statistic Kendaraan yang terparkir dalam satu bulan terakhir, dan juga melihat tempat parkir. Yu Kunjungi !</p>
         <p>
-          <a href="/login" class="btn btn-danger my-2">Buat Akun</a>
+        @if (Route::has('login')) 
+        @auth 
+          <a href="/home" class="btn btn-danger my-2">Hi {{ Auth::user()->name }}</a>
+        @else
+          <a href="/login" class="btn btn-danger my-2">Login</a>
+        @endauth
+        @endif
           <a href="/katakanpeta" class="btn btn-primary my-2">Lihat Peta</a>
           <a href="/home" class="btn btn-secondary my-2">Home</a>
         </p>
@@ -70,7 +76,7 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

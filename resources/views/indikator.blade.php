@@ -36,7 +36,12 @@
                 }
             }
             </style>
-    
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <script>
+            function showRandomNumber(){
+                document.getElementById("myNumber").innerHTML = rando(1, 80);
+            }
+        </script>
     <script>
 window.onload = function () {
 
@@ -76,13 +81,14 @@ registredMemberCount($connection);
 <main>
 <div class="w3-light-grey">
     <div class="w3-container w3-white w3-center">Indikator Kendaraan</div>
-    <div class="w3-container w3-red w3-center" style="width:37%">FIK 30/80</div>
+    <div onload="showRandomNumber();" class="w3-container w3-red w3-center" id="myNumber" style="width:37%">FIK 37/80</div>
     <div class="w3-container w3-blue w3-center" style="width:40%">FIT 40/100</div>
     <div class="w3-container w3-green w3-center" style="width:25%">GKU 100/400</div>
     <div class="w3-container w3-grey w3-center" style="width:75%">TUCH 75/100</div>
     <div class="w3-container w3-pink w3-center" style="width:50%">Gedung D 15/30</div>
-    <div class="w3-container w3-cyan w3-center" style="width:50%">Gedung D 30/60</div>
+    <div class="w3-container w3-cyan w3-center" style="width:50%">Gedung K 30/60</div>
     <div class="w3-container w3-yellow w3-center" style="width85%">MSU 120/140</div>
+    <div class="w3-container w3-red w3-center">Total user : {{$parkirdong->count()}}</div>
 </div>
 <br/>
 <br/>
